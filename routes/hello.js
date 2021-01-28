@@ -4,7 +4,9 @@
  */
 
 exports.view = function(req, res){
-  res.render('index', {
-  	'name': '',
+  //user input
+  var nameToShow = req.params.userName;
+  res.render('hello', {
+  	'name': nameToShow,
   });
 };
